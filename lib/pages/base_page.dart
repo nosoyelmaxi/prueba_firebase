@@ -11,6 +11,6 @@ class BasePage extends StatelessWidget {
   Widget build(BuildContext context) {
     final usuario = Provider.of<User?>(context);
 
-    return usuario != null ? HomePage() : AdminPage();
+    return usuario == null ? HomePage() : AdminPage();
   }
 }
